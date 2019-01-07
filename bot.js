@@ -69,12 +69,76 @@ client.on('message', message => {
 
 
 
+client.on('message' , message => {
+var prefix = "&"
+
+if (message.author.bot) return;
+if (message.content.startsWith(prefix + "contact")) {
+if (!message.channel.guild) return;
+
+
+
+let args = message.content.split(" ").slice(1).join(" ");
+
+
+
+client.users.get("427919028934279179").send(
+    "\n" + "**" + "السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + "المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + "الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
+
+let embed = new Discord.RichEmbed()
+     .setAuthor(message.author.username, message.author.avatarURL)
+     .setDescription('تم ارسال الرسالة الى صاحب البوت بنجاح')
+     .setThumbnail(message.author.avatarURL)
+     .setFooter("𝒟ℰ𝒜𝒯ℋ { Bot } By: TM - هبيد عالمي#9216 ")
+                                                
+
+message.channel.send(embed);
+
+
+}
+    
+});
 
 
 
 
+client.on('message', message => {
+if (message.content.startsWith(prefix + "avatar")) {
+  var mentionned = message.mentions.users.first();
+var x5bzm;
+if(mentionned){
+    var x5bzm = mentionned;
+} else {
+    var x5bzm = message.author;
+    
+}
+  const embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setImage(`${x5bzm.avatarURL}`)
+message.channel.sendEmbed(embed);
+}
+});
 
 
+client.on("message", message => {    
+    if(!message.channel.guild) return;
+if(message.author.bot) return;
+if(message.content === prefix + "s-avatar"){ 
+    const embed = new Discord.RichEmbed()
+
+.setTitle(`صورة ** ${message.guild.name} **`)
+.setAuthor(message.author.username, message.guild.iconrURL)
+.setColor('RANDOM')
+.setImage(message.guild.iconURL)
+
+message.channel.send({embed});
+}
+});
 
 
 
