@@ -66,6 +66,15 @@ client.on('message', message => {
                   }
 });
 
+            client.on('message', message => {
+                 var prefix = "&";
+                if(message.content === prefix + "inv") {
+                    let embed = new Discord.RichEmbed ()
+                    embed.setTitle("**:arrow_right: 𝒟ℰ𝒜𝒯ℋ { Bot } ةفاضإل انه طغضا :arrow_left:**")
+                    .setURL("https://discordapp.com/api/oauth2/authorize?client_id=531743219466240001&permissions=8&scope=bot");
+                   message.channel.sendEmbed(embed);
+                  }
+});
 
 
 
