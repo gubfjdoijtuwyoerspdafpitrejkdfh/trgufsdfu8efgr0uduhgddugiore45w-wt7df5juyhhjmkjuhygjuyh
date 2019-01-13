@@ -48,7 +48,7 @@ client.on('message', message => {
             .addField('``عدد الرومات``' , `[ ${client.channels.size} ]` , true)
             .addField('``عدد المستخديمن``' ,`[ ${client.users.size} ]` , true)
             .addField('``اللغه البرمجية``' , `[ Java Script ]` , true)
-            .setFooter('𝒟ℰ𝒜𝒯ℋ { Bot } By: TM - هبيد عالمي#9216')
+            .setFooter('𝒟ℰ𝒜𝒯ℋ { Bot } Created By:TM - Zetrex#9216')
     })
 }
 });
@@ -94,7 +94,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription('تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("𝒟ℰ𝒜𝒯ℋ { Bot } By: TM - هبيد عالمي#9216 ")
+     .setFooter("𝒟ℰ𝒜𝒯ℋ { Bot } Created By:TM - Zetrex#9216 ")
                                                 
 
 message.channel.send(embed);
@@ -143,23 +143,6 @@ message.channel.send({embed});
 
 
 
-client.on('message', message => {
-    if (message.content === "&rooms") {
-        if (message.author.bot) return
-                      if (!message.guild) return;
-
-        var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
-        const embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .addField(`${message.guild.name}`,`**Rooms:white_check_mark:**`)
-        .addField(':arrow_down: Rooms Number. :heavy_check_mark:',`** ${message.guild.channels.size}**`)
-        
-.addField(':arrow_down:Rooms  Name. :heavy_check_mark::',`**[${channels}]**`)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-
 
 
 client.on('message', message => {
@@ -168,7 +151,7 @@ client.on('message', message => {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "𝒟ℰ𝒜𝒯ℋ { Bot } By: TM - هبيد عالمي#9216";
+    let copy = "𝒟ℰ𝒜𝒯ℋ { Bot } Created By:TM - Zetrex#9216";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
     msg.react('✅')
@@ -300,7 +283,7 @@ var mentionned = message.mentions.members.first();
 .addField(': دخولك لديسكورد قبل', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true) 
 .addField(': انضمامك لسيرفر قبل', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)
 .addField(': عدد الدعوات', inviteCount,false)
-.setFooter("𝒟ℰ𝒜𝒯ℋ { Bot } By: TM - هبيد عالمي#9216")  
+.setFooter("𝒟ℰ𝒜𝒯ℋ { Bot } Created By:TM - Zetrex#9216")  
     message.channel.sendEmbed(id);
 })
 }
