@@ -236,7 +236,7 @@ client.on('message', message => {
     var reason = message.content.split(' ').slice(2).join(' ');
     if(message.content.startsWith(prefix + 'report')) {
         if(message.author.bot) return;
-        if(!message.guild.channels.find('name', 'report')) return message.channel.send('`report` **يجب على الإدارة صنع روم بأسم**').then(msg => msg.delete(5000));
+        if(!message.guild.channels.find('name', '𝑹𝑬𝑷𝑶𝑹𝑻')) return message.channel.send('`𝑹𝑬𝑷𝑶𝑹𝑻` **يجب على الإدارة صنع روم بأسم**').then(msg => msg.delete(5000));
     if(!name1) return message.reply('**منشن شخص يتم التبليغ عليه**').then(msg => msg.delete(3000))
         message.delete();
     if(!reason) return message.reply('**أكتب السبب**').then(msg => msg.delete(3000))
@@ -312,7 +312,28 @@ var mentionned = message.mentions.members.first();
 
 
 
+client.on('message',async message => {
+  let args = message.content.split(" ").slice(1).join(" ");
+  let role = message.guild.roles.find('name',args) || message.guild.roles.get(args);
 
+
+  if(message.content.startsWith(prefix + "Ri")) {
+    if(!args) return message.reply('اكتب اسم الرتبة');
+    if(!role) return message.reply('هذه الرتبة غير موجودة');
+    let iQp = new Discord.RichEmbed()
+    .setAuthor(message.author.tag,message.author.avatarURL)
+    .setTitle(message.guild.name)
+    .setThumbnail(message.guild.iconURL)
+    .addField('- اسم الرتبة',role.name,true)
+    .addField('- اي دي الرتبة',role.id,true)
+    .addField('- تم انشاء الرتبة',role.createdAt.toLocaleString(),true)
+    .addField('- لون الرتبة',role.hexColor,true)
+    .addField('- عدد الاعظاء الذي لديهم نفس الرتبة',role.members.size,true)
+    .setFooter(message.author.tag,message.author.avatarURL);
+
+    message.channel.send(iQp);
+  }
+});
 
 
 
