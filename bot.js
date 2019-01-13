@@ -228,7 +228,7 @@ client.on('message', message => {
     var reason = message.content.split(' ').slice(2).join(' ');
     if(message.content.startsWith(prefix + 'report')) {
         if(message.author.bot) return;
-        if(!message.guild.channels.find('name', '𝑹𝑬𝑷𝑶𝑹𝑻')) return message.channel.send('`𝑹𝑬𝑷𝑶𝑹𝑻` **يجب على الإدارة صنع روم بأسم**').then(msg => msg.delete(5000));
+        if(!message.guild.channels.find('name', 'report')) return message.channel.send('`report` **يجب على الإدارة صنع روم بأسم**').then(msg => msg.delete(5000));
     if(!name1) return message.reply('**منشن شخص يتم التبليغ عليه**').then(msg => msg.delete(3000))
         message.delete();
     if(!reason) return message.reply('**أكتب السبب**').then(msg => msg.delete(3000))
@@ -244,6 +244,7 @@ client.on('message', message => {
     message.reply('**شكراً لأنك بلغت**').then(msg => msg.delete(3000));
     }
 });
+
 
 
 
