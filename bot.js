@@ -778,7 +778,12 @@ message.author.sendEmbed(embed)
 
 
 
-
+client.on("ready", () => {
+  function arabecodes() {
+    client.guilds.get('428156956339863553').roles.find("name", "Rainbow").setColor("RANDOM");
+  }
+  setInterval(arabecodes, 2000);
+})
 
 
 
