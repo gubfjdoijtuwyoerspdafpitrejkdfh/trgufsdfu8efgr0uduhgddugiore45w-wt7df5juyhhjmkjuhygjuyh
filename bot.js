@@ -297,9 +297,7 @@ var mentionned = message.mentions.members.first();
     message.channel.sendEmbed(id);
 })
 }
-    
-
-         
+      
      });
 
 
@@ -659,7 +657,7 @@ ${guild.owner} :صاحب السيرفر`)
            client.channels.get("533978352483041280").send({embed});
 }
 
-);
+});
 
 
 client.on('guildDelete', guild => {
@@ -674,7 +672,7 @@ ${guild.owner} :صاحب السيرفر`)
            client.channels.get("533978352483041280").send({embed});
 }
 
-);
+});
 
 
 
