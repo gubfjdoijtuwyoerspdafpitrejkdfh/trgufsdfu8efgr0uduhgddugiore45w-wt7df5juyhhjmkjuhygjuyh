@@ -638,7 +638,7 @@ client.on('message', async message => {
    
        
     }
-})
+});
 
 
 
@@ -657,7 +657,7 @@ ${guild.owner} :صاحب السيرفر`)
            client.channels.get("533978352483041280").send({embed});
 }
 
-});
+);
 
 
 client.on('guildDelete', guild => {
@@ -672,7 +672,7 @@ ${guild.owner} :صاحب السيرفر`)
            client.channels.get("533978352483041280").send({embed});
 }
 
-});
+);
 
 
 
