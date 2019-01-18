@@ -768,7 +768,7 @@ client.on("message", message => {
 
 
 message.author.sendEmbed(embed)
-})
+  
 }
 });
 
