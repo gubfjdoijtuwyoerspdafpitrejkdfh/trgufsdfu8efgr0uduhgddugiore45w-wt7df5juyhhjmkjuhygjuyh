@@ -779,6 +779,124 @@ message.author.sendEmbed(embed)
 
 
 
+client.on('ready', () => {
+    setInterval(function(){
+        client.guilds.get('428156956339863553').roles.find('name', 'اRainbow').edit({color: 'RANDOM'})
+    },20000);
+  /// https://discord.gg/yzBdF3E /// Mal , Codes //// Mal , Galal
+/// https://discord.gg/yzBdF3E /// Mal , Codes //// Mal , Galal 
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
