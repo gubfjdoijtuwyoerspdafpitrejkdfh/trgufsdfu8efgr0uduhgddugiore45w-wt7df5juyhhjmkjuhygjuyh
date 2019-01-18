@@ -771,25 +771,6 @@ client.on("message", message => {
 
 message.author.sendEmbed(embed)
 
-}
-}); 
-
-})
-
-}
-message.channel.send('Done The Rainbow Role Setup Has Been Completed')//if the step completed
-}})
-
-client.on('ready', () => {//new ready event
-  setInterval(function(){
-      client.guilds.forEach(g => {
-                  var role = g.roles.find('name', 'Rainbow');//rainbow role name
-                  if (role) {
-                      role.edit({color : "RANDOM"});
-                  };
-      });
-  }, 5000);//the rainbow time
-})
 
 
 
