@@ -793,13 +793,6 @@ client.on('ready', () => {//new ready event
 
 
 
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","Member"));
-    }); 
-
-
-
-
 
 
 
